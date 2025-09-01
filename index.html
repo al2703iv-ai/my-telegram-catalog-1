@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Каталог товаров</title>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f8f9fa;
+      margin: 0;
+    }
+    .product {
+      background: white;
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .product h3 {
+      margin: 0 0 8px 0;
+      color: #1a73e8;
+    }
+    .product p {
+      color: #555;
+      font-size: 0.95em;
+      margin: 5px 0;
+    }
+    .product a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 16px;
+      background: #1a73e8;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 0.9em;
+    }
+    .product a:hover {
+      background: #0d62d1;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .header h1 {
+      color: #1a73e8;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>🛍️ Наш каталог</h1>
+    <p>Выберите товар и перейдите на страницу</p>
+  </div>
+
+  <div class="product">
+    <h3>ЖОПА Дмитрия Сергеевича</h3>
+    <p>Цена: 1000 BYN</p>
+    <p>Старая, потрепанная, но в рабочем состоянии</p>
+    <a href="https://example.com/phone" target="_blank">Подробнее</a>
+  </div>
+
+  <div class="product">
+    <h3>:ЖОПА мелкого Димки</h3>
+    <p>Цена: 500 BYN</p>
+    <p>Молодая, рабочая, с пробегом</p>
+    <a href="https://example.com/headphones" target="_blank">Подробнее</a>
+  </div>
+
+  <div class="product">
+    <h3>ЖОПА Марата</h3>
+    <p>Цена: Бесценна</p>
+    <p>Не продается ни при каких условиях</p>
+    <a href="https://example.com/watch" target="_blank">Подробнее</a>
+  </div>
+
+  <script>
+    // Готовим Mini App к работе
+    if (window.Telegram?.WebApp) {
+      Telegram.WebApp.ready();
+      Telegram.WebApp.expand(); // Открыть на весь экран
+    }
+  </script>
+</body>
+</html>
